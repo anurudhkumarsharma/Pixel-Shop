@@ -72,6 +72,10 @@ The following optional features have been added to the Product Listing page:
 -   **Search:** A search bar allows filtering products by title (case-insensitive).
 -   **Pagination:** Results are paginated client-side to display a manageable number of products per page (8 items per page).
 
+## Live deployed link
+
+[https://eh-pixel-shop.netlify.app/]
+
 
 
 

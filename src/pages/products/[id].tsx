@@ -1,7 +1,7 @@
 // src/pages/products/[id].tsx
 import React from 'react';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
-import { useRouter } from 'next/router'; // Optional: For fallback state or programmatic navigation
+//import { useRouter } from 'next/router'; // Optional: For fallback state or programmatic navigation
 import Image from 'next/image';
 import Link from 'next/link';
 import { ParsedUrlQuery } from 'querystring'; // Type helper for URL parameters
@@ -12,7 +12,7 @@ import { getProductById, getAllProductIds } from '@/lib/api'; // Import API func
 
 // Required Components (Ensure these exist in src/components/)
 import Layout from '@/components/Layout';
-import LoadingSpinner from '@/components/LoadingSpinner'; // For fallback:true or potential client-side loading
+//import LoadingSpinner from '@/components/LoadingSpinner'; // For fallback:true or potential client-side loading
 import ErrorMessage from '@/components/ErrorMessage';
 
 // Props type definition for this page
@@ -27,7 +27,7 @@ interface ProductDetailParams extends ParsedUrlQuery {
 }
 
 const ProductDetailPage: NextPage<ProductDetailPageProps> = ({ product, error }) => {
-  const router = useRouter();
+  //const router = useRouter();
 
   // --- Optional: Handle loading state if using fallback: true in getStaticPaths ---
   // If you used fallback: 'blocking', this isn't strictly necessary as Next.js waits for the page

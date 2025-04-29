@@ -109,9 +109,7 @@ const ProductsPage: NextPage<ProductsPageProps> = ({
   // --- Effects ---
   // Reset to page 1 whenever filters, search term, or sort criteria change
   useEffect(() => {
-    if (currentPage !== 1) {
-        setCurrentPage(1);
-    }
+    setCurrentPage(1);
   }, [selectedCategory, searchTerm, sortCriteria]); // Dependency array includes things that change the total item count/order
 
   // --- Event Handlers ---

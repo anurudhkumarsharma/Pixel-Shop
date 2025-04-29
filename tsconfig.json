@@ -1,3 +1,4 @@
+// tsconfig.json (Alternative Configuration)
 {
   "compilerOptions": {
     "target": "ES2017",
@@ -13,9 +14,13 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    // --- CHANGES START HERE ---
+    "baseUrl": ".", // Base URL is the project root (location of tsconfig.json)
     "paths": {
-      "@/*": ["./src/*"]
+       // Map '@/*' to 'src/*' relative to the baseUrl
+      "@/*": ["src/*"]
     }
+   // --- CHANGES END HERE ---
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

@@ -2,10 +2,24 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['fakestoreapi.com'], // Add the domain used by the API for images
+    // Keep your existing image domains configuration
+    domains: ['fakestoreapi.com'],
   },
-  // If you chose not to use the src directory during setup, remove swcMinify: true if present
-  // It might be automatically configured depending on the version.
-}
 
-module.exports = nextConfig
+  // --- ADD THIS ASYNC REWRITES FUNCTION ---
+  async rewrites() {
+    return [
+      {
+        // When the user requests the root path...
+        source: '/',
+        // ...internally serve the content from the /products page
+        destination: '/products',
+      },
+      // You could add more rewrite rules here if needed later
+    ];
+  },
+  // --- END OF ADDITION ---
+
+};
+
+module.exports = nextConfig;

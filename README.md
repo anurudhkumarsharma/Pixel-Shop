@@ -29,7 +29,7 @@ Using npm:
 npm run dev
 ```
 
-Open https://www.google.com/search?q=http://localhost:3000 in your browser to view the application. The main product list is available at # /products.
+Open https://www.google.com/search?q=http://localhost:3000 in your browser to view the application. The main product list is available at /products.
 
 ## Project Structure
 

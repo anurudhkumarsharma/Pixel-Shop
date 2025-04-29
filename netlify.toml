@@ -1,0 +1,6 @@
+# netlify.toml
+
+[[redirects]]
+  from = "/"          # When someone requests the root path
+  to = "/products"    # Serve the content from the /products path
+  status = 200        # Use status 200 to rewrite (show content without changing browser URL)
